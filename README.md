@@ -9,7 +9,7 @@
 
 ## 使用環境
 ```
--只能在 Windows 上運行
+-只能在 Windows 7 / 8 / 10 運行
 -必要安裝 .Net Framework 4.5.2
 ```
 
