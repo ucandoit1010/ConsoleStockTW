@@ -18,8 +18,19 @@
 -沒有紅、綠色醒目的困擾
 -以四個價格為主的呈現方式
 ```
-## 畫面圖例
+## 結果說明
+```
+O = 當日開盤價
+H = 當日最高價
+L = 當日最低價
+C = 目前價格，如收盤則為當日收盤價
+Sbt = C 減 O，負數為開盤後跌，正數為漲
+```
 
+## 畫面圖例
+![執行後](https://github.com/ucandoit1010/ConsoleStockTW/blob/master/1start.png)
+
+![執行後](https://github.com/ucandoit1010/ConsoleStockTW/blob/master/2query.png)
 
 ## 資料來源
 ```
