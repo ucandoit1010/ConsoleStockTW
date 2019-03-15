@@ -9,7 +9,8 @@
 ## 使用環境
 ```
 -只能在 Windows 7 / 8 / 10 運行
--必要安裝  [.Net Framework 4.5.2](https://www.microsoft.com/zh-TW/download/details.aspx?id=42642).
+-必要安裝 .Net Framework 4.5.2 連結在下方。
+https://www.microsoft.com/zh-TW/download/details.aspx?id=42642
 ```
 
 ## 獨家特色
