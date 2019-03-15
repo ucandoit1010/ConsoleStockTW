@@ -5,6 +5,9 @@
 ```
 因為老闆開保時捷911，當員工的要靠自己從股市撈一台保時捷，所以開發查價專用的工具。
 ```
+## 程式下載
+
+https://github.com/ucandoit1010/ConsoleStockTW/releases/download/v190315.01/ConsoleStockTW_v190315.01.zip
 
 ## 使用環境
 ```
