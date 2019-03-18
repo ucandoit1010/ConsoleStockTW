@@ -26,6 +26,11 @@ https://www.microsoft.com/zh-TW/download/details.aspx?id=42642
 -緊急鍵，如需立刻關閉程式只需要按 Enter 即可。
 ```
 
+## 使用限制
+```
+試搓時間會查不到價格。
+```
+
 ## 結果說明
 ```
 O = 當日開盤價
