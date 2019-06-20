@@ -6,9 +6,6 @@
 -上班族的你、我不需要花時間一直看盤，只要查價即可。
 -做得不錯的話，右上角幫我按一下星星
 ```
-## 程式下載
-
-https://github.com/ucandoit1010/ConsoleStockTW/releases/download/v190315.01/ConsoleStockTW_v190315.01.zip
 
 ## 使用環境
 ```
