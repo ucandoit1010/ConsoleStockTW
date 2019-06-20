@@ -20,6 +20,11 @@ namespace ConsoleStock
             WebClient client = new WebClient();
             client.Encoding = System.Text.Encoding.UTF8;
             client.Headers.Add("user-agent", GenerateUserAgent());
+            
+            ServicePointManager.SecurityProtocol =
+                SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls |
+                SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+            
             string jsonResult = client.DownloadString(url);
 
             return jsonResult;
