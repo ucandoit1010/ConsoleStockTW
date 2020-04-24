@@ -29,6 +29,7 @@ namespace ConsoleStock
                     }
 
                     StockInfoReader reader = new StockInfoReader();
+                    List<StockData> modelData = new List<StockData>();
                     //string content = reader.ReadJSONFromFile(@"D:\stock.json");
                     string url = string.Format(
                         "http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_{0}.tw",
@@ -53,10 +54,12 @@ namespace ConsoleStock
                     }
                     else
                     {
-                        Console.WriteLine("************Code:{0}***********", stockModel.Code);
-                        Console.WriteLine("H:{0}  , L:{1}", stockModel.High, stockModel.Low);
+                        modelData = (stockModel == null ? new List<StockData>() : stockModel.msgArray);
+                        StockData data = modelData[0];
+
+                        Console.WriteLine("************Code:{0}***********", data.Code); Console.WriteLine("H:{0}  , L:{1}", data.High.ToString("##.##"), data.Low.ToString("##.##"));
                         Console.WriteLine("O:{0}  , C:{1} , Sbt:{2}",
-                            stockModel.Open, stockModel.Current, (stockModel.Current - stockModel.Open) * 1000);
+                            data.Open.ToString("##.##"), data.Current.ToString("##.##"), ((data.Current - data.Open) * 1000).ToString("##.##"));
                         Console.WriteLine("Now:{0}", stockModel.NowDateTime.ToString("yyyy-MM-dd HH:mm:ss"));
                         Console.WriteLine("*************END************");                        
                     }

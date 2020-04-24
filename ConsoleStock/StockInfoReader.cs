@@ -20,7 +20,7 @@ namespace ConsoleStock
             WebClient client = new WebClient();
             client.Encoding = System.Text.Encoding.UTF8;
             client.Headers.Add("user-agent", GenerateUserAgent());
-            
+
             ServicePointManager.SecurityProtocol =
                 SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls |
                 SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
@@ -34,7 +34,6 @@ namespace ConsoleStock
         {
             var jsonContent = JsonConvert.DeserializeObject<JObject>(jsonResult);
             JToken subJson;
-            JObject jObj;
             StockModel stockModel = null;
 
             //避免代碼為上市但查上櫃
@@ -48,11 +47,11 @@ namespace ConsoleStock
                 subJson = item.Value;
                 var child = subJson.Children();
 
-                foreach (var token in child)
+                foreach (JToken token in child)
                 {
-                    jObj = JObject.Parse(token.ToString());
-                    stockModel = JsonConvert.DeserializeObject<StockModel>(jObj.ToString());
-                    stockModel.NowDateTime = ParseMilisecond(stockModel.Miliseconds.ToString());
+                    var oo = token.Root.ToString();
+                    stockModel = JsonConvert.DeserializeObject<StockModel>(oo);
+                    stockModel.NowDateTime = ParseMilisecond(stockModel.msgArray[0].Miliseconds.ToString());
                     break;
                 }
 
